@@ -1,0 +1,199 @@
+$main-font: "Josefin Sans", sans-serif;
+$main-color: #0e76bc;
+
+.home-container {
+  min-height: 100%;
+  width: 100%;
+
+  .home-hero-wrapper {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .home-hero-img {
+      img {
+        max-width: 100%;
+        height: 20rem;
+        object-fit: cover;
+      }
+    }
+    .home-hero-txt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      padding: 0 5rem;
+      .hero-txt-one {
+        font-family: $main-font;
+        font-size: 2.2rem;
+        margin-bottom: 2.2rem;
+      }
+      .hero-txt-two {
+        font-family: $main-font;
+        font-size: 1.2rem;
+      }
+      .hero-btn {
+        background-color: #000;
+        color: $main-color;
+        border: none;
+        padding: 10px 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 2.2rem;
+      }
+    }
+  }
+  .home-head-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 2rem;
+    margin-top: 5rem;
+    background-color: #000;
+    .head-txt {
+      font-family: $main-font;
+      font-size: 2rem;
+      color: $main-color;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    select#genreSelect {
+      background-color: $main-color;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      appearance: none; // Removes the default select arrow
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      option {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: $main-font;
+
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+
+    select#genreSelect:hover + .dropdown-content {
+      display: block;
+    }
+
+    select#genreSelect:hover {
+      background-color: #f1f1f1;
+      color: $main-color;
+    }
+  }
+
+  .home-content-wrapper {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 2rem;
+
+    #content-albums {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+
+      .albumDiv {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: $main-color;
+        padding: 2rem 2rem;
+
+        .albumTxt {
+          padding: 0.7rem 0;
+          font-family: $main-font;
+        }
+
+        .shopBtn {
+          background-color: #000;
+          color: $main-color;
+          border: none;
+          padding: 10px 50px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .shopBtn:hover {
+          background-color: #fff;
+        }
+      }
+    }
+    img {
+      height: 220px;
+      width: 220px;
+    }
+  }
+}
+
+// responsiveness
+@media screen and (max-width: 1080px) {
+  .home-container {
+    .home-content-wrapper {
+      #content-albums {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+@media screen and (max-width: 902px) {
+  .home-container {
+    .home-hero-wrapper {
+      display: flex;
+      flex-direction: column;
+      .home-hero-img {
+        img {
+          padding: 0 2rem;
+        }
+      }
+
+      /* Adjust the width of .hero-txt-one and .hero-txt-two */
+      .hero-txt-one {
+        margin-top: 2rem;
+        width: 15rem;
+      }
+      .hero-txt-two {
+        margin-top: 2rem;
+        width: 20rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .home-container {
+    .home-hero-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .home-content-wrapper {
+      #content-albums {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

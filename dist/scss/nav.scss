@@ -1,0 +1,23 @@
+$txt-color: #0e76bc;
+
+.homeNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  background-color: #000;
+  .nav-logo {
+    padding: 0 1rem;
+    .nav-logo-txt {
+      font-size: 2rem;
+      color: $txt-color;
+      font-family: "Josefin Sans", sans-serif;
+    }
+  }
+  .nav-links a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: $txt-color;
+    font-family: "Josefin Sans", sans-serif;
+  }
+}

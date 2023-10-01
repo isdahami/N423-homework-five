@@ -1,0 +1,18 @@
+$main-font: "Josefin Sans", sans-serif;
+$main-color: #0e76bc;
+
+footer {
+  background-color: #000;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: $main-font;
+  font-size: 0.8rem;
+  color: $main-color;
+
+  a {
+    color: $main-color;
+    text-decoration: none;
+  }
+}
